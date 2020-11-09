@@ -52,6 +52,16 @@ public class EpisodeRepositoryTest {
         assertThrows(DataIntegrityViolationException.class, () -> {
             episodeRepository.saveAndFlush(episode2);
         });
+    }
+
+    @Test
+    public void saveEpisodeWithoutGivingValueToNotNullableField() {
+        Episode episode1 = Episode.builder()
+                .build();
+
+        assertThrows(DataIntegrityViolationException.class, () -> {
+            episodeRepository.save(episode1);
+        });
 
     }
 }

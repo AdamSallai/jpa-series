@@ -19,7 +19,7 @@ public class Episode {
     private Long ID;
 
     @Column(nullable = false, unique = true)
-    private int episodeNumber;
+    private Integer episodeNumber;
 
     private String title;
     private LocalDate releaseDate;
