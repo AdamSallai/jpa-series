@@ -18,9 +18,11 @@ public class Episode {
     @GeneratedValue
     private Long ID;
 
+    @Column(nullable = false, unique = true)
+    private int episodeNumber;
+
     private String title;
     private LocalDate releaseDate;
-    private double rating;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
     private Season season;
