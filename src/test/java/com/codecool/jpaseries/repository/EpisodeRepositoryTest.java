@@ -62,6 +62,5 @@ public class EpisodeRepositoryTest {
         assertThrows(DataIntegrityViolationException.class, () -> {
             episodeRepository.save(episode1);
         });
-
     }
 }

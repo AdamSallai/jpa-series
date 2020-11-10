@@ -23,7 +23,7 @@ public class Series {
     @Enumerated(EnumType.STRING)
     private List<Genre> genres;
 
-    @OneToMany(mappedBy = "series",cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "series",cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     private List<Season> seasons;
 
     @Transient

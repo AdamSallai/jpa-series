@@ -22,7 +22,7 @@ public class Season {
     private String title;
     private LocalDate startDate;
 
-    @OneToMany(mappedBy = "season", cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "season", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     private List<Episode> episodes;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
